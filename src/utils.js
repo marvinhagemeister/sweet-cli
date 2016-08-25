@@ -1,15 +1,26 @@
+const chalk = require('chalk');
 
-const UTILS = (template, pretty)=>{
+function pad(str) {
+  return ` ${str} `;
+}
+
+function printFactory(opts) {
+  let { type, title, message, titleStyle, messageStyle } = opts;
+
+  if (typeof message === 'undefined') {
+    message = title;
+    title = type.toUpperCase();
+  }
+
+  title = pad(title);
+
   return {
-    /**
-     * Indent add a number of spaces before the text in order to  put in in the same line
-     *
-     * @param  {string|array} content if content is a string the function tries to split it 
-     * @return {[type]}         [description]
-     */
-    indent:(content)=>{
-        return pretty._output(content, 'line');
-    }
+    title: pad(chalk[titleStyle](title)),
+    message: chalk[messageStyle](message)
   }
 }
-export default UTILS;
+
+module.exports = {
+  printFactory,
+  pad
+};
