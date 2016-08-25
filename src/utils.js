@@ -9,14 +9,16 @@ function printFactory(opts) {
 
   if (typeof message === 'undefined') {
     message = title;
-    title = type.toUpperCase();
+    title = type.charAt(0).toUpperCase();
+  } else {
+    message = chalk[messageStyle](message)
   }
 
   title = pad(title);
 
   return {
     title: pad(chalk[titleStyle](title)),
-    message: chalk[messageStyle](message)
+    message
   }
 }
 

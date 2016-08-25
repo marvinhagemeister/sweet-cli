@@ -7,11 +7,11 @@ describe('Templates', () => {
 
   describe('Log', () => {
     it('should render with only a message', () => {
-      const title = pad(chalk.bgWhite(' LOG '));
+      const title = pad(chalk.bgWhite(' L '));
 
       t.deepEqual(log('Hello World'), {
         title,
-        message: chalk.white('Hello World')
+        message: 'Hello World'
       });
     });
 
@@ -27,11 +27,11 @@ describe('Templates', () => {
 
   describe('Info', () => {
     it('should render with only a message', () => {
-      const title = pad(chalk.bgBlue(' INFO '));
+      const title = pad(chalk.bgBlue(' I '));
 
       t.deepEqual(info('Hello World'), {
         title,
-        message: chalk.blue('Hello World')
+        message: 'Hello World'
       });
     });
 
@@ -47,11 +47,11 @@ describe('Templates', () => {
 
   describe('Warning', () => {
     it('should render with only a message', () => {
-      const title = pad(chalk.bgYellow(' WARNING '));
+      const title = pad(chalk.bgYellow(' W '));
 
       t.deepEqual(warning('Hello World'), {
         title,
-        message: chalk.yellow('Hello World')
+        message: 'Hello World'
       });
     });
 
@@ -67,11 +67,11 @@ describe('Templates', () => {
 
   describe('Error', () => {
     it('should render with only a message', () => {
-      const title = pad(chalk.bgRed(' ERROR '));
+      const title = pad(chalk.bgRed(' E '));
 
       t.deepEqual(error('Hello World'), {
         title,
-        message: chalk.red('Hello World')
+        message: 'Hello World'
       });
     });
 
@@ -87,11 +87,11 @@ describe('Templates', () => {
 
   describe('Success', () => {
     it('should render with only a message', () => {
-      const title = pad(chalk.bgGreen(' SUCCESS '));
+      const title = pad(chalk.bgGreen(' S '));
 
       t.deepEqual(success('Hello World'), {
         title,
-        message: chalk.green('Hello World')
+        message: 'Hello World'
       });
     });
 
