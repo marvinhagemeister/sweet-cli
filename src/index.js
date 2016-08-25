@@ -18,10 +18,15 @@ function error(title, message) {
   return generic('error', title, message);
 }
 
+function success(title, message) {
+  return generic('success', title, message);
+}
+
 module.exports = {
   clear,
   log,
   info,
   warning,
-  error
+  error,
+  success
 }

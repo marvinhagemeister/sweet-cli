@@ -3,8 +3,12 @@ const index = require('../src/index');
 
 describe('Index', () => {
   it('should have the right exports', () => {
-    const exported = ['clear', 'log', 'info', 'warning', 'error'];
+    const exported = ['clear', 'log', 'info', 'warning',
+      'error', 'success'];
 
-    exported.forEach(name => t.ok(typeof index[name] === 'function'));
+    t.equal(index.length, exported.lenght);
+
+    exported.forEach(name =>
+      t.ok(typeof index[name] === 'function'));
   });
 });
