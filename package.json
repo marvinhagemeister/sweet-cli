@@ -21,7 +21,6 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
-    "chalk": "^1.1.3",
     "mocha": "^2.5.3"
   },
   "repository": {
@@ -29,7 +28,6 @@
     "url": "https://github.com/MichaelCereda/pretty-cli.git"
   },
   "dependencies": {
-    "colors": "^1.1.2",
-    "lodash": "^4.15.0"
+    "chalk": "^1.1.3"
   }
 }
