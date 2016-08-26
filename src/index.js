@@ -22,11 +22,16 @@ function success(title, message) {
   return generic('success', title, message);
 }
 
+function transparent(title, message) {
+  return generic('transparent', title, message);
+}
+
 module.exports = {
   clear,
   log,
   info,
   warning,
   error,
-  success
+  success,
+  transparent
 }

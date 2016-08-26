@@ -1,6 +1,6 @@
 const t = require('chai').assert;
 const chalk = require('chalk');
-const { log, info, warning, error, success } = require('../src/templates');
+const { log, info, warning, error, success, transparent } = require('../src/templates');
 const { pad } = require('../src/utils');
 
 describe('Templates', () => {
@@ -101,6 +101,26 @@ describe('Templates', () => {
       t.deepEqual(success('SUCCESS Test', 'Hello World'), {
         title,
         message: chalk.green('Hello World')
+      });
+    });
+  });
+
+  describe('Transparent', () => {
+    it('should render with only a message', () => {
+      const title = pad('   ');
+
+      t.deepEqual(transparent('Hello World'), {
+        title,
+        message: 'Hello World'
+      });
+    });
+
+    it('should render with both a message and a title', () => {
+      const title = pad('Test');
+
+      t.deepEqual(transparent('Test', 'Hello World'), {
+        title,
+        message: 'Hello World'
       });
     });
   });

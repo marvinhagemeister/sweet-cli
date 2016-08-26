@@ -50,10 +50,19 @@ function success(title, message) {
   });
 }
 
+function transparent(title, message) {
+  return factory({
+    type: 'transparent',
+    title,
+    message
+  });
+}
+
 module.exports = {
   info,
   log,
   warning,
   error,
-  success
+  success,
+  transparent
 };

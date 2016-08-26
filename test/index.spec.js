@@ -4,7 +4,7 @@ const index = require('../src/index');
 describe('Index', () => {
   it('should have the right exports', () => {
     const exported = ['clear', 'log', 'info', 'warning',
-      'error', 'success'];
+      'error', 'success', 'transparent'];
 
     t.equal(index.length, exported.lenght);
 

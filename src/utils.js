@@ -30,15 +30,22 @@ function printFactory(opts) {
   if (typeof message === 'undefined') {
     // MAGIC: 1 left + 2 bg pad + 1 content + 2 right
     message = padMessage(6, title);
-    title = type.charAt(0).toUpperCase();
-  } else {
+
+    if (type === 'transparent') {
+      title = '   ';
+    } else {
+      title = type.charAt(0).toUpperCase();
+      title = pad(title);
+      title = chalk[titleStyle](title).trim();
+    }
+  } else if (type !== 'transparent') {
     message = chalk[messageStyle](message)
+    title = pad(title);
+    title = chalk[titleStyle](title).trim();
   }
 
-  title = pad(title);
-
   return {
-    title: pad(chalk[titleStyle](title)),
+    title: pad(title),
     message
   }
 }
