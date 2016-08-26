@@ -2,6 +2,8 @@
 
 Create beautiful cli-interfaces with ease.
 
+[![Build Status](https://travis-ci.org/marvinhagemeister/sweet-cli.svg?branch=master)](https://travis-ci.org/marvinhagemeister/sweet-cli)
+
 ## Installation
 
 ```js
