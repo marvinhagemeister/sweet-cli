@@ -15,6 +15,8 @@ npm install --save sweet-cli
 ```js
 const sweet = require('sweet-cli');
 
+// Possible log types: success | error| warning | info | log | transparent
+
 // With a custom title
 sweet.error('ERROR', 'This is an error');
 
@@ -23,24 +25,14 @@ sweet.info('App running at example.com');
 
 // Multiline messages get padded automatically
 sweet.transparent('Build time: 0.625ms\nBundle size: 101 KB');
+
+// clear console
+sweet.clear();
 ```
 
 Output of the above code sample:
 
 ![Visual output](example.png)
-
-Built-in loggers:
-
-- `success`
-- `error`
-- `warning`
-- `info`
-- `log`
-- `transparent`
-
-Other exported functions:
-
-- `clear`: clears the console
 
 ## Special Thanks
 
