@@ -9,7 +9,7 @@ describe('Logger', () => {
         message: 'yo!'
       };
 
-      t.equal(render(input), 'Hello World yo!\n\n');
+      t.equal(render(input), '\nHello World yo!\n');
     });
   });
 });
