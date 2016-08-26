@@ -9,7 +9,7 @@ function generic(type, title, message) {
 }
 
 function render(obj) {
-  return obj.title + ' ' + obj.message + '\n\n';
+  return `\n${obj.title} ${obj.message}\n`;
 }
 
 function clear() {
