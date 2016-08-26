@@ -28,6 +28,7 @@
     "url": "https://github.com/MichaelCereda/pretty-cli.git"
   },
   "dependencies": {
-    "chalk": "^1.1.3"
+    "chalk": "^1.1.3",
+    "indent-string": "^3.0.0"
   }
 }

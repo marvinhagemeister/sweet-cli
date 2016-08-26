@@ -1,24 +1,19 @@
 const chalk = require('chalk');
+const indent = require('indent-string');
 
 function pad(str) {
   return ` ${str} `;
 }
 
-function padMessage(length, message) {
-  const lines = message.split('\n');
+function indentExceptFirstLine(str, len) {
+  const lines = str.split('\n');
 
   for (let i = 0; i < lines.length; i++) {
     if (i === 0) {
       continue;
     }
 
-    lines[i] = lines[i].trim();
-
-    const expectedLen = lines[i].length + length;
-
-    while(lines[i].length < expectedLen) {
-      lines[i] = ' ' + lines[i];
-    }
+    lines[i] = indent(lines[i], len);
   }
 
   return lines.join('\n');
@@ -29,7 +24,7 @@ function printFactory(opts) {
 
   if (typeof message === 'undefined') {
     // MAGIC: 1 left + 2 bg pad + 1 content + 2 right
-    message = padMessage(6, title);
+    message = indentExceptFirstLine(title, 6);
 
     if (type === 'transparent') {
       title = '   ';
@@ -53,5 +48,5 @@ function printFactory(opts) {
 module.exports = {
   printFactory,
   pad,
-  padMessage
+  indentExceptFirstLine
 };
