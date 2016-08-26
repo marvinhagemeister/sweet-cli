@@ -1,5 +1,3 @@
-const chalk = require('chalk');
-const templates = require('./templates');
 const { clear, generic } = require('./logger');
 
 function log(title, message) {

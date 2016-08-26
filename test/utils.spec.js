@@ -1,5 +1,4 @@
 const t = require('chai').assert;
-const chalk = require('chalk');
 const { pad, indentExceptFirstLine } = require('../src/utils');
 
 describe('Utils', () => {

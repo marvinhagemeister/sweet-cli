@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const templates = require('./templates');
 
 function generic(type, title, message) {

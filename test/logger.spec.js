@@ -1,6 +1,5 @@
 const t = require('chai').assert;
-const chalk = require('chalk');
-const { render, generic } = require('../src/logger');
+const { render } = require('../src/logger');
 
 describe('Logger', () => {
   describe('render()', () => {
